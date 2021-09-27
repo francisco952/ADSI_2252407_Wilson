@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nota-definitiva.css">
+    <link rel="stylesheet" href="css/medidas-menu.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Definitiva</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="calculadora.html"><span class="icon-home"></span> Inicio</a></li>
+                <li><a href="#" class="submenu"><span class="icon-suitcase"></span> Trabajos  <span class="icon-chevron-down"></span></a> 
+                    <ul class="children">
+                        <li><a href="Horas del trabajador.html"><span class="icon-credit"></span> Salario</a></li>
+                        <li><a href="aumento.html"><span class="icon-line-graph"></span> Interes</a></li>
+                        <li><a href="#"><span class="icon-calculator"></span> Promedio</a></li>
+                        <li><a href="mayor-menor-promedio.html"><span class="icon-hand"></span> Valores</a></li>   
+                    </ul>
+                </li>
+                <li><a href="#"><span class="icon-graduation-cap"></span> Ejercicios</a></li>
+                <li><a href="#"><span class="icon-rocket"></span> Proyectos</a></li>
+                <li><a href="#"><span class="icon-attachment"></span> Pruebas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor-principal">
+       <div class="contenedor-secundario">
+           <div class="titulo">
+               <h1>Inserte sus calificaciones <br>
+                   para conocer su nota final</h1>
+           </div>
+            <div class="primero">
+                <label>Primer Parcial</label>
+            </div>
+            <div class="barra1">
+                <input class="contenedor-barra" type="number" id="parcial_uno" placeholder=" Esta nota vale el 20%">
+            </div><br>
+            <div class="segundo">
+            <label>Segundo Parcial</label>
+            </div>
+            <div class="barra2">
+                <input class="contenedor-barra" type="number" id="parcial_dos" placeholder=" Esta nota vale el 25%">
+            </div><br>
+            <div class="tercero">
+                <label>Tercer Parcial</label>
+            </div>
+            <div class="barra3">
+                <input class="contenedor-barra" type="number" id="parcial_tres" placeholder=" Esta nota vale el 30%">
+            </div><br>
+            <div class="cuarto">
+                <label>Cuarto Parcial</label>
+            </div>
+            <div class="barra4">
+            <input class="contenedor-barra" type="number" id="parcial_cuatro" placeholder=" Esta nota vale el 25%">
+            </div><br>
+            <div class="boton-accion">
+                <button class="boton" onclick="Calcular();">Nota final</button>
+            </div>
+            <div class="respuesta" id="Nota_Final"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function Calcular(){
+        var nota1=parseInt(document.getElementById('parcial_uno').value);
+        var nota2=parseInt(document.getElementById('parcial_dos').value);
+        var nota3=parseInt(document.getElementById('parcial_tres').value);
+        var nota4=parseInt(document.getElementById('parcial_cuatro').value);
+        var porcentaje1=(nota1*0.20);
+        var porcentaje2=(nota2*0.25);
+        var porcentaje3=(nota3*0.30);
+        var porcentaje4=(nota4*0.25);
+        var promedio=(porcentaje1+porcentaje2+porcentaje3+porcentaje4);
+        if(promedio>=3){
+            document.getElementById('Nota_Final').innerHTML='Felicidades!!!!! <br> Aprobo la materia de programacion en '+promedio;
+        }
+        if(promedio<3){
+            document.getElementById('Nota_Final').innerHTML='Lo sentimos!!! <br> Reprobo la materia de progrmacion en '+promedio;
+        }
+        if(promedio<2.5){
+            document.getElementById('Nota_Final').innerHTML='Lo sentimos!!! <br> Esta en transiccion ya que su nota es '+promedio;
+        }
+    }
+    
+</script>

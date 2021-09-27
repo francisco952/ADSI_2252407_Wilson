@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/aumento.css">
+    <link rel="stylesheet" href="css/medidas-menu.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Aumento</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="calculadora.html"><span class="icon-home"></span> Inicio</a></li>
+                <li><a href="#" class="submenu"><span class="icon-suitcase"></span> Trabajos  <span class="icon-chevron-down"></span></a> 
+                    <ul class="children">
+                        <li><a href="Horas del trabajador.html"><span class="icon-credit"></span> Salario</a></li>
+                        <li><a href="#"><span class="icon-line-graph"></span> Interes</a></li>
+                        <li><a href="nota_definitiva.html"><span class="icon-calculator"></span> Promedio</a></li>
+                        <li><a href="mayor-menor-promedio.html"><span class="icon-hand"></span> Valores</a></li>   
+                    </ul>
+                </li>
+                <li><a href="#"><span class="icon-graduation-cap"></span> Ejercicios</a></li>
+                <li><a href="#"><span class="icon-rocket"></span> Proyectos</a></li>
+                <li><a href="#"><span class="icon-attachment"></span> Pruebas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="conter-main">
+        <div class="conter-son">
+            <div class="titulo-principal">
+                <h1>Inserte la cantidad de Dinero ganada <br>
+                para saber su bonificacion de interes</h1>
+            </div><br>
+            <div class="sub-titulo">
+                <label class="titulo">Salario</label><span class="icon-credit"></span>
+            </div>
+            <div class="barra">
+                <input type="number" id="sueldo" class="contenedor-barra" placeholder="$$$$$$$$$$$$$$$$$$$$$$$$">
+            </div><br>
+            <div class="boton">
+                <button onclick="Aumento();" class="boton-principal">Calcular</button>
+            </div>
+            <div id="resultado" class="respuesta"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function Aumento(){
+        var salario=parseInt(document.getElementById('sueldo').value);
+        if(salario>=1000000){
+            var aumento=(salario*0.05);
+            document.getElementById('resultado').innerHTML='Su aumento es de'+aumento;
+        }
+        if(salario<=800000){
+            var Pago=(salario*0.1);
+            document.getElementById('resultado').innerHTML='Su aumento es de '+Pago;
+        }
+}
+</script>

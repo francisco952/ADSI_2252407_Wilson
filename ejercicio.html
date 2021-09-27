@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esturctura de if, if-else y swicht</title>
+</head>
+<body>
+    <input type="number" id="edad" placeholder="digite su edad">
+    <button onclick="comparar();">ingresar</button><br><br>
+    <select  id="dia">
+        <option value='1'>dia 1</option>
+        <option value='2'>dia 2</option>
+        <option value='3'>dia 3</option>
+        <option value='4'>dia 4</option>
+        <option value='5'>dia 5</option>
+        <option value='6'>dia 6</option>
+        <option value='7'>dia 7</option>
+    </select>
+    <button onclick="Mostrar();">Mostrar dia</button><br><br>
+    <div id="mensaje"></div><br><br>
+    <select id="mes">
+        <option value='1'>mes de 1</option>
+        <option value='2'>mes de 2</option>
+        <option value='3'>mes de 3</option>
+        <option value='4'>mes de 4</option>
+        <option value='5'>mes de 5</option>
+        <option value='6'>mes de 6</option>
+        <option value='7'>mes de 7</option>
+        <option value='8'>mes de 8</option>
+        <option value='9'>mes de 9</option>
+        <option value='10'>mes de 10</option>
+        <option value='11'>mes de 11</option>
+        <option value='12'>mes de 12</option>
+    </select>
+    <button ondblclick="Mesactual();">Mostrar mes</button><br><br>
+    <div id="mensaje_mes"></div>
+   
+</body>
+</html>
+<script>
+    function Mesactual(){
+        var mes = document.getElementById('mes').value;
+        switch(mes){
+                case '1':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es enero';
+                    break;
+                case '2':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es febrero';
+                    break;
+                case '3':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es marzo';
+                    break;
+                case '4':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es abril';
+                    break;
+                 case '5':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es mayo';
+                    break;
+                case '6':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es junio';
+                    break;
+                case '7':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es julio';
+                    break; 
+                case '8':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es agosto';
+                    break; 
+                case '9':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es septiembre';
+                    break; 
+                case '10':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es octubre';
+                    break; 
+                case '11':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es noviembre';
+                    break; 
+                case '12':
+                    document.getElementById('mensaje_mes').innerHTML='El mes es diciembre';
+                    break;               
+                default:
+                    document.getElementById('mensaje_mes').innerHTML='El mes no existe';
+                    break; 
+        }
+        
+    }
+    function Mostrar(){
+        var dia = document.getElementById('dia').value;
+        switch(dia){
+                case '1':
+                    document.getElementById('mensaje').innerHTML='El dia es lunes';
+                    break;
+        
+                case '2':
+                    document.getElementById('mensaje').innerHTML='El dia es Martes';
+                    break;
+        
+                case '3':
+                    document.getElementById('mensaje').innerHTML='El dia es Miercoles';
+                    break;
+        
+                case '4':
+                    document.getElementById('mensaje').innerHTML='El dia es jueves';
+                    break;
+        
+                 case '5':
+                    document.getElementById('mensaje').innerHTML='El dia es viernes';
+                    break;
+                case '6':
+                    document.getElementById('mensaje').innerHTML='El dia es sabado';
+                    break;
+                case '7':
+                    document.getElementById('mensaje').innerHTML='El dia es domingo';
+                    break;               
+                default:
+                    document.getElementById('mensaje').innerHTML='El dia no existe';
+                    break; 
+
+        
+    }
+    }
+    function comparar(){
+        var edad=parseInt(document.getElementById("edad").value);
+        if(edad<=10){
+            alert("eres menor de edad");
+        }
+        if(edad > 10 && edad<18){
+            alert("eres un adolescente");
+        }
+        if(edad >=18){
+            alert("Eres mayor de edad");
+        }
+    }
+</script>

@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url('../img/numero-variados.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    font-size: 1.5em;
+    text-align: center;
+}
+.titulo, .numero1, .numero2, .numero3, .respuesta {
+    font-family: 'Roboto', sans-serif; 
+}
+.titulo{
+    padding: 7px;
+}
+.contenedor-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+.contenedor-secundario{
+    background-color: rgb(245, 245, 245, 0.7);
+    border-radius: 5px;
+}
+.numero1, .barra1, .numero2, .barra2, .numero3, .barra3{
+    display: inline-block;
+    padding: 7px;
+}
+.numero1, .numero2, .numero3{
+    margin-left: 45px;
+}
+.barra{
+     /* border: none; */
+     border-radius: 5px;
+}
+.boton-accion1, .boton-accion2, .boton-accion3, .boton-accion4{
+    padding: 7px;
+    text-align: center;
+}
+.boton{
+    font-family: 'Roboto', sans-serif; 
+    margin: 0 auto;
+    background: greenyellow;
+    font-size: 1em;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 7px;
+}
+.respuesta{
+    text-align: center;
+    padding: 7px;
+}

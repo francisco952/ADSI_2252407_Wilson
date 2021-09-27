@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mayor-menor-promedio.css">
+    <link rel="stylesheet" href="css/medidas-menu.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Mayor y Menor</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="calculadora.html"><span class="icon-home"></span> Inicio</a></li>
+                <li><a href="#" class="submenu"><span class="icon-suitcase"></span> Trabajos  <span class="icon-chevron-down"></span></a> 
+                    <ul class="children">
+                        <li><a href="Horas del trabajador.html"><span class="icon-credit"></span> Salario</a></li>
+                        <li><a href="aumento.html"><span class="icon-line-graph"></span> Interes</a></li>
+                        <li><a href="nota_definitiva.html"><span class="icon-calculator"></span> Promedio</a></li>
+                        <li><a href="#"><span class="icon-hand"></span> Valores</a></li>   
+                    </ul>
+                </li>
+                <li><a href="#"><span class="icon-graduation-cap"></span> Ejercicios</a></li>
+                <li><a href="#"><span class="icon-rocket"></span> Proyectos</a></li>
+                <li><a href="#"><span class="icon-attachment"></span> Pruebas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor-principal">
+        <div class="contenedor-secundario">
+            <div class="titulo">
+                <h1>Inserte numeros para ejecutar <br>
+                    las siguientes acciones.</h1>
+            </div>
+            <div class="numero1">
+                <label>Numero 1</label>
+            </div> 
+            <div class="barra1">
+                <input type="number" id="numero-1" class="barra">
+            </div> <br>
+            <div class="numero2">
+                <label>Numero 2</label>
+            </div>
+            <div class="barra2">
+             <input type="number" id="numero-2" class="barra">
+            </div><br>
+            <div class="numero3">
+                <label>Numero 3</label>
+            </div>
+            <div class="barra3">
+                <input type="number" id="numero-3" class="barra">
+            </div><br>
+            <div class="boton-accion1">
+                <button class="boton" onclick="Mayor();">Mayor</button>
+            </div>
+            <div class="respuesta" id="superior"></div><br>
+            <div class="boton-accion2">
+                <button class="boton" onclick="Menor();">Menor</button>
+            </div>
+            <div class="respuesta" id="inferior"></div><br>
+            <div class="boton-accion3">
+                <button class="boton" onclick="Promedio();">Promedio</button>
+            </div>
+            <div class="respuesta" id="promedio"></div><br>
+            <div class="boton-accion4">
+                <button class="boton" onclick="Par();">Par e impar</button>
+            </div>
+            <div class="respuesta" id="pares"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function Mayor(){
+        var nota1=parseInt(document.getElementById('numero-1').value);
+        var nota2=parseInt(document.getElementById('numero-2').value);
+        var nota3=parseInt(document.getElementById('numero-3').value); 
+        if(nota1>nota2 && nota1>nota3){
+            document.getElementById('superior').innerHTML='el numero ' + nota1 + ' es el Mayor de todos';
+        } 
+        if(nota2>nota1 && nota2>nota3){
+            document.getElementById('superior').innerHTML='el numero ' + nota2 + ' es el Mayor de todos';
+        }
+        if(nota3>nota1 && nota3>nota2){
+            document.getElementById('superior').innerHTML='el numero ' + nota3 + ' es el Mayor de todos';
+        }
+    }
+    function Menor(){
+        var nota1=parseInt(document.getElementById('numero-1').value);
+        var nota2=parseInt(document.getElementById('numero-2').value);
+        var nota3=parseInt(document.getElementById('numero-3').value); 
+        if(nota1<nota2 && nota1<nota3){
+            document.getElementById('inferior').innerHTML='el numero ' + nota1 + ' es el Menor de todos';
+        }
+        if(nota2<nota1 && nota2<nota3){
+            document.getElementById('inferior').innerHTML='el numero ' + nota2 + ' es el Menor de todos';
+        }
+        if(nota3<nota1 && nota3<nota2){
+            document.getElementById('inferior').innerHTML='el numero ' + nota3 + ' es el Menor de todos';
+        }
+    }
+    function Promedio(){
+        var nota1=parseInt(document.getElementById('numero-1').value);
+        var nota2=parseInt(document.getElementById('numero-2').value);
+        var nota3=parseInt(document.getElementById('numero-3').value);
+        var promedio=(nota1+nota2+nota3)/3
+        document.getElementById('promedio').innerHTML='Este es el promedio insertado <br> es de '+promedio;
+    }
+    function Par(){
+        var variable1=parseInt(document.getElementById('numero-1').value);
+        var nota2=parseInt(document.getElementById('numero-2').value);
+        var variable3=parseInt(document.getElementById('numero-3').value);
+        if(variable1 % 2 == 0){
+            document.getElementById('pares').innerHTML='El numero ' +variable1+ ' es par';
+        }
+        if(variable1 % 2 == 1){
+            document.getElementById('pares').innerHTML='El numero ' +variable1+ ' es impar';
+        }
+        if(nota2 % 2 == 0){
+            document.getElementById('pares').innerHTML='El numero ' +nota2+ ' es par';
+        }
+        if(nota2 % 2 == 1){
+            document.getElementById('pares').innerHTML='El numero ' +nota2+ ' es impar';
+        }
+        if(variable3 % 2 == 0){
+            document.getElementById('pares').innerHTML='El numero ' +variable3+ ' es par';
+        }
+        if(variable3 % 2 == 1){
+            document.getElementById('pares').innerHTML='El numero ' +variable3+ ' es impar';
+        }
+    }
+</script>

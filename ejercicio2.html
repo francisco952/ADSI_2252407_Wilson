@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+</head>
+<body>
+    <input type="number" id="area" placeholder="digite area"><br><br>
+    <input type="number" id="altura" placeholder="digite altura"><br><br>
+    <button onclick="calcular();">Calcular</button>
+    <div id="Resultado"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var b= parseInt(document.getElementById('area').value);
+        var a= parseInt(document.getElementById('altura').value);
+        var res= (b*a)/2;
+    if(res>100){
+        document.getElementById('Resultado').innerHTML='el area "'+res+'" es mayor de 100';
+    }
+    else{
+        document.getElementById('Resultado').innerHTML='el area "'+res+'" es menor de 100';
+    }
+    }
+</script>
