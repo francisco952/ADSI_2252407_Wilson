@@ -133,5 +133,26 @@
         if(variable3 % 2 == 1){
             document.getElementById('pares').innerHTML='El numero ' +variable3+ ' es impar';
         }
+        if(variable1 % 2 == 0 && nota2 % 2 == 0 && variable3 % 2 == 0){
+            document.getElementById('pares').innerHTML='Los numeros ' + variable1 + + nota2 + + variable3 + ' son pares';
+        }
+        if(variable1 % 2 == 1 && nota2 % 2 == 1 && variable3 % 2 == 1){
+            document.getElementById('pares').innerHTML='Los numeros ' + variable1 + + nota2 + + variable3 + ' son impares';
+        }
+        if(variable1 % 2 == 0 && nota2 % 2 == 1 && variable3 % 2 == 1){
+            document.getElementById('pares').innerHTML='El numero ' +variable1+ ' Es par y los numeros ' +nota2+ +variable3+' Son impares';
+        }
+        if(variable1 % 2 == 0 && nota2 % 2 == 0 && variable3 % 2 == 1){
+            document.getElementById('pares').innerHTML='Los numeros ' + variable1 + + nota2 +' son pares y el numero'+variable3+' Es impar';
+        }
+        if(variable1 % 2 == 1 && nota2 % 2 == 1 && variable3 % 2 == 0){
+            document.getElementById('pares').innerHTML='Los numeros ' + variable1 + + nota2 +' son impares y el numero'+variable3+' Es par';
+        }
+        if(variable1 % 2 == 1 && nota2 % 2 == 0 && variable3 % 2 == 1){
+            document.getElementById('pares').innerHTML='Los numeros ' + variable1 + + variable3 +' son impares y el numero'+nota2+' Es par';
+        }
+        if(variable1 % 2 == 01&& nota2 % 2 == 0 && variable3 % 2 == 0){
+            document.getElementById('pares').innerHTML='Los numeros ' + nota2 + + variable3 +' son pares y el numero'+variable1+' Es impar';
+        }
     }
 </script>
