@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares e Impare</title>
+</head>
+<body>
+    <input type="number" id="valor">
+    <button onclick="Encontrar();">Calcular</button>
+    <div id="Resultado"></div>
+</body>
+</html>
+<script>
+    function Encontrar(){
+        var valor=parseInt(document.getElementById('valor').value);
+        var Par=0;
+        var impar=0;
+        for(var i=0; i<=valor; i++){
+            if(i % 2 == 0 ){
+                Par += i;
+            }
+            else{
+                impar += i;
+            }
+        }
+        document.getElementById('Resultado').innerHTML='Hay'+Par+'numeros pares y'+impar+'numeros impares';
+    }
+</script>
