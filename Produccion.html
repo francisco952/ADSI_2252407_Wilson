@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produccion</title>
+</head>
+<body>
+    <label>Id Produccion</label>
+    <input type="number" id="identificacion_produccion">
+    <label>Estado Produccion</label>
+    <input type="text" id="Estado">
+    <label>Cantidad</label>
+    <input type="number" id="Cantidad">
+    <label>Fecha</label>
+    <input type="text" id="Fecha" placeholder="00-00-0000">
+    <label>Observacion</label>
+    <input type="text" id="Observacion">
+    <label>Codigo Producto</label>
+    <input type="number" id="Codigo_Producto">
+    <label>Codigo Unidad Productiva</label>
+    <input type="number" id="Codigo_unidad_productiva">
+    <button onclick="Registrar();">Registrar</button>
+    <table>
+        <th>Id Producto</th>
+        <th>Estado Produccion</th>
+        <th>Cantidad</th>
+        <th>Fecha</th>
+        <th>Observacion</th>
+        <th>Codigo Producto</th>
+        <th>Codigo Unidad Productiva</th>
+        <tbody id="tabla"></tbody>
+    </table>
+</body>
+</html>
+<script>
+    var Produccion=[];
+    function Registrar(){
+        var identificacion = document.getElementById('identificacion_produccion').value;
+        var Estado = document.getElementById('Estado').value;
+        var Acumulacion = document.getElementById('Cantidad').value;
+        var Fecha = document.getElementById('Fecha').value;
+        var Observacion = document.getElementById('Observacion').value;
+        var Codigo_pdto = document.getElementById('Codigo_Producto').value;
+        var Codigo_updt = document.getElementById('Codigo_unidad_productiva').value;
+        
+        Produccion.push({identificacion,Estado,Acumulacion,Fecha,Observacion,Codigo_pdto,Codigo_updt});
+        alert("Se registro la Produccion con Exito :D "+identificacion);
+        Revelar();
+    }
+    function Revelar(){
+        var datos="";
+        for(var i=0; i<Produccion.length; i++){
+            datos+="<tr>";
+            datos+= "<td>"+Produccion[i].identificacion+"</td>";
+            datos+= "<td>"+Produccion[i].Estado+"</td>";
+            datos+= "<td>"+Produccion[i].Acumulacion+"</td>";
+            datos+= "<td>"+Produccion[i].Fecha+"</td>";
+            datos+= "<td>"+Produccion[i].Observacion+"</td>";
+            datos+= "<td>"+Produccion[i].Codigo_pdto+"</td>";
+            datos+= "<td>"+Produccion[i].Codigo_updt+"</td>";
+            datos+="</tr>"
+        }
+        document.getElementById('tabla').innerHTML=datos;
+    }
+</script>
