@@ -4,12 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/medidas-menu.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="stylesheet" href="css/pares e impares.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <title>Pares e Impare</title>
 </head>
 <body>
-    <input type="number" id="valor">
-    <button onclick="Encontrar();">Calcular</button>
-    <div id="Resultado"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="calculadora.html"><span class="icon-home"></span> Inicio</a></li>
+                <li><a href="#" class="submenu"><span class="icon-suitcase"></span> Trabajos  <span class="icon-chevron-down"></span></a> 
+                    <ul class="children">
+                        <li><a href="Horas del trabajador.html"><span class="icon-credit"></span> Salario</a></li>
+                        <li><a href="aumento.html"><span class="icon-line-graph"></span> Interes</a></li>
+                        <li><a href="nota_definitiva.html"><span class="icon-calculator"></span> Promedio</a></li>
+                        <li><a href="mayor-menor-promedio.html"><span class="icon-hand"></span> Valores</a></li>   
+                    </ul>
+                </li>
+                <li><a href="#"><span class="icon-graduation-cap"></span> Ejercicios <span class="icon-chevron-down"></span></a>
+                    <ul class="children-1">
+                        <li><a href="multiplo-de-tres.html"> Multiplos del 3 <span class="icon-flow-cascade"></span></a></li>
+                        <li><a href="#">Pares e impras <span class=" icon-blackboard"></span></a></li>
+                        <li><a href="multiplos-cinco.html">Multiplos de 5 <span class="icon-flow-tree"></span></a></li>
+                    </ul>
+                </li>
+                <li><a href="Produccion.html"><span class="icon-rocket"></span> Produccion</a></li>
+                <li><a href="#"><span class="icon-attachment"></span> Pruebas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor-principal">
+        <div class="contenedor-secundario">
+            <div class="titulo-principal">
+                <h1>Inserte un numero para conocer <br>
+                su suma en pares e impares</h1>
+            </div><br>
+            <div class="barra-1">
+                <input class="barra" type="number" id="valor">
+            </div>
+            <div class="boton-accion">
+                <button class="boton" onclick="Encontrar();">Calcular</button>
+            </div>
+        <div class="respuesta" id="Resultado"></div>
+        </div>
+    </div>
 </body>
 </html>
 <script>
@@ -25,6 +67,6 @@
                 impar += i;
             }
         }
-        document.getElementById('Resultado').innerHTML='Hay'+Par+'numeros pares y'+impar+'numeros impares';
+        document.getElementById('Resultado').innerHTML='Hay '+Par+' numeros pares y '+impar+' numeros impares';
     }
 </script>

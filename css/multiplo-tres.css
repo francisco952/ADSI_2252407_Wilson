@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url('../img/tabla-3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    font-size: 1.9em;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+.contenedor-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+}
+.contenedor-secundario{
+    background-color: rgb(245, 245, 245, 0.7);
+    border-radius: 5px;
+}
+.boton-accion{
+    padding: 10px;
+    text-align: center;
+}
+.boton{
+    margin: 0 auto;
+    background: greenyellow;
+    font-size: 1em;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 7px;
+}
+.respuesta{
+    text-align: center;
+    padding: 7px;
+    font-family: 'Oswald', sans-serif;
+}

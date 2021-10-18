@@ -33,6 +33,22 @@ nav ul li .children {
     background: #011826;
     text-align: left;
 }
+nav ul li .children-1{
+    display: none;
+    position: absolute;
+    background: #011826;
+    text-align: left;
+}
+nav ul li .children-1 li{
+    overflow: hidden;
+    display: block;
+    border-bottom: rgba(255, 255, 255, .5); 
+}
+nav ul li:hover .children-1{
+    display: block;
+    width: 115%;
+    text-align: left;
+}
 nav ul li:hover .children {
     display: block;
     width: 105%;

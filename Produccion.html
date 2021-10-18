@@ -4,34 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/medidas-menu.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="stylesheet" href="css/Produccion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
     <title>Produccion</title>
 </head>
 <body>
-    <label>Id Produccion</label>
-    <input type="number" id="identificacion_produccion">
-    <label>Estado Produccion</label>
-    <input type="text" id="Estado">
-    <label>Cantidad</label>
-    <input type="number" id="Cantidad">
-    <label>Fecha</label>
-    <input type="text" id="Fecha" placeholder="00-00-0000">
-    <label>Observacion</label>
-    <input type="text" id="Observacion">
-    <label>Codigo Producto</label>
-    <input type="number" id="Codigo_Producto">
-    <label>Codigo Unidad Productiva</label>
-    <input type="number" id="Codigo_unidad_productiva">
-    <button onclick="Registrar();">Registrar</button>
-    <table>
-        <th>Id Producto</th>
-        <th>Estado Produccion</th>
-        <th>Cantidad</th>
-        <th>Fecha</th>
-        <th>Observacion</th>
-        <th>Codigo Producto</th>
-        <th>Codigo Unidad Productiva</th>
-        <tbody id="tabla"></tbody>
-    </table>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="calculadora.html"><span class="icon-home"></span> Inicio</a></li>
+                <li><a href="#" class="submenu"><span class="icon-suitcase"></span> Trabajos  <span class="icon-chevron-down"></span></a> 
+                    <ul class="children">
+                        <li><a href="Horas del trabajador.html"><span class="icon-credit"></span> Salario</a></li>
+                        <li><a href="aumento.html"><span class="icon-line-graph"></span> Interes</a></li>
+                        <li><a href="#"><span class="icon-calculator"></span> Promedio</a></li>
+                        <li><a href="mayor-menor-promedio.html"><span class="icon-hand"></span> Valores</a></li>   
+                    </ul>
+                </li>
+                <li><a href="#"><span class="icon-graduation-cap"></span> Ejercicios <span class="icon-chevron-down"></span></a>
+                    <ul class="children-1">
+                        <li><a href="multiplo-de-tres.html"> Multiplos del 3 <span class="icon-flow-cascade"></span></a></li>
+                        <li><a href="impares.html">Pares e Impares <span class=" icon-blackboard"></span></a></li>
+                        <li><a href="multiplos-cinco.html">Multiplos de 5 <span class="icon-flow-tree"></span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="icon-rocket"></span> Produccion</a></li>
+                <li><a href="#"><span class="icon-attachment"></span> Pruebas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor-principal">
+        <div class="contenedor-secundario">
+            <div class="titulo-principal">
+                <h1>Registro de Produccion</h1>
+            </div><br>
+            <div class="identificacion-produccion">
+                <label>Id Produccion</label>
+            </div>
+            <div class="barra-1">
+                <input type="number" id="identificacion_produccion" class="barra">
+            </div><br><br>
+            <div class="barra-produccion">
+                <label>Estado Produccion</label>
+            </div>
+            <div class="barra-2">
+                <input type="text" id="Estado" class="barra">
+            </div><br><br>
+            <div class="barra-cantidad">
+                <label>Cantidad</label>
+            </div>
+            <div class="barra-3">
+                <input type="number" id="Cantidad" class="barra">
+            </div><br><br>
+            <div class="barra-fecha">
+                <label>Fecha</label>
+            </div>
+            <div class="barra-4">
+                <input type="date" id="Fecha"  class="barra">
+            </div><br><br>
+            <div class="barra-observacion">
+                <label>Observacion</label>
+            </div><br>
+            <div class="barra-5">
+                <textarea class="barra" id="Observacion" cols="40" rows="5">Observaciones(Max. 200 caracteres)</textarea>
+            </div><br>
+            <div class="barra-codg-pdto">
+                <label>Codigo Producto</label>
+            </div>
+            <div class="barra-6">
+                <input type="number" id="Codigo_Producto" class="barra">
+            </div><br><br>
+            <div class="barra-cdg-unpd">
+                <label>Codigo Unidad Productiva</label>
+            </div>
+            <div class="barra-7">
+                <input type="number" id="Codigo_unidad_productiva" class="barra">
+            </div><br><br>
+            <div class="boton-accion">
+                <button class="boton" onclick="Registrar();">Registrar</button>
+            </div>
+            <table>
+                <th>Id Producto</th>
+                <th>Estado Produccion</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+                <th>Observacion</th>
+                <th>Codigo Producto</th>
+                <th>Codigo Unidad Productiva</th>
+                <tbody id="tabla"></tbody>
+            </table><br>
+        </div>
+    </div>
 </body>
 </html>
 <script>
@@ -46,7 +116,7 @@
         var Codigo_updt = document.getElementById('Codigo_unidad_productiva').value;
         
         Produccion.push({identificacion,Estado,Acumulacion,Fecha,Observacion,Codigo_pdto,Codigo_updt});
-        alert("Se registro la Produccion con Exito :D "+identificacion);
+        alert("Se registro la Produccion con Exito "+identificacion);
         Revelar();
     }
     function Revelar(){
